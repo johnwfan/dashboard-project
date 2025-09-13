@@ -1,0 +1,296 @@
+section {
+    background: var(--bg-tertiary);
+    border: var(--bd);
+    border-radius: var(--bd-radius);
+
+    --icon-size: 58px;
+
+    display: grid;
+    grid-template-rows: max-content 1fr;
+
+}
+
+section > header {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--sp-sm-1);
+    padding: var(--sp-lg-1);
+    grid-template-areas:
+        "icon header"
+        "icon sub-header";
+    
+}
+
+section > header > .icon {
+    grid-area: icon;
+
+    display: grid;
+
+    border-radius: calc(2 / 3 * var(--bd-radius));
+
+    filter: invert(100%);
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+section > header > h2 {
+    grid-area: header;
+
+    font-size: var(--fs-lg-1);
+    align-self: end;
+}
+
+section > header > p{
+    grid-area: sub-header;
+
+    font-weight: var(--fw-sm);
+}
+.friends-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm-1);
+    padding: var(--sp-sm-2) var(--sp-lg-1);
+  }
+  
+  .friend {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm-2);
+  }
+  
+  .friend .avatar {
+    width: 40px;
+    height: 40px;
+    background: var(--fg-secondary);
+    border-radius: 50%;
+  }
+  
+  .friend .info .name {
+    font-weight: var(--fw-base);
+  }
+  
+  /* --- Messages Glow --- */
+  .messages.unread {
+    box-shadow: 0 0 20px 5px rgba(255, 147, 5, 0.6);
+  }
+  
+  /* --- Progress Bars --- */
+  .progress {
+    width: 90%;
+    height: 10px;
+    background: #444;
+    border-radius: 6px;
+    overflow: hidden;
+    margin: var(--sp-sm-2) auto;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(to right, var(--hi-primary), #fff);
+    border-radius: 6px;
+  }
+  
+  .progress-text {
+    font-size: var(--fs-sm-1);
+    text-align: center;
+    color: var(--fg-secondary);
+  }
+  
+  /* --- My Day Calendar --- */
+  .calendar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm-2);
+    padding: var(--sp-lg-1);
+  }
+  
+  .hour {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm-2);
+  }
+  
+  .hour span {
+    width: 50px;
+    font-size: var(--fs-sm-1);
+    color: var(--fg-secondary);
+  }
+  
+  .event-box {
+    flex: 1;
+    background: var(--hi-primary);
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: var(--bd-radius);
+    font-size: var(--fs-sm-1);
+  }
+
+  /* --- Friends Grid --- */
+.friends-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: var(--sp-lg-2);
+    padding: var(--sp-lg-1);
+    text-align: center;
+  }
+  
+  .friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-sm-2);
+  }
+  
+  .friend .avatar {
+    width: 70px;
+    height: 70px;
+    background: var(--fg-secondary);
+    border-radius: 50%;
+  }
+  
+  .friend .name {
+    font-weight: var(--fw-base);
+  }
+  
+  /* --- Project Teams --- */
+  .project-team {
+    display: flex;
+    gap: -10px;
+    padding: 0 var(--sp-lg-1);
+    margin-bottom: var(--sp-sm-2);
+  }
+  
+  .avatar.small {
+    width: 35px;
+    height: 35px;
+    background: var(--fg-secondary);
+    border-radius: 50%;
+    border: 2px solid var(--bg-tertiary);
+  }
+  
+  /* Progress text above bar */
+  .progress-text {
+    font-size: var(--fs-sm-1);
+    text-align: center;
+    color: var(--fg-secondary);
+    margin-bottom: var(--sp-sm-2);
+  }
+  
+  /* --- Calendar Expansion --- */
+  .my-day {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .calendar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm-2);
+    padding: var(--sp-lg-1);
+  }
+  
+  .hour {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm-2);
+  }
+  
+  .hour span {
+    width: 50px;
+    font-size: var(--fs-sm-1);
+    color: var(--fg-secondary);
+  }
+  
+  .event-box {
+    flex: 1;
+    background: var(--hi-primary);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: var(--bd-radius);
+    font-size: var(--fs-sm-1);
+  }
+/* --- To-Do List Styles --- */
+.todo {
+    padding: var(--sp-lg-1);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm-2);
+  }
+  
+  #todo-form {
+    display: flex;
+    gap: var(--sp-sm-2);
+  }
+  
+  #todo-form input {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: var(--bd-radius);
+    border: none;
+    outline: none;
+    font-size: var(--fs-base);
+  }
+  
+  #todo-form button {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: var(--hi-primary);
+    color: white;
+    font-size: var(--fs-lg-1);
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  #todo-form button:hover {
+    background: var(--hi-secondary);
+  }
+  
+  #task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-sm-2);
+  }
+  
+  #task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg-tertiary);
+    padding: 6px 10px;
+    border-radius: var(--bd-radius);
+  }
+  
+  #task-list li.completed span {
+    text-decoration: line-through;
+    color: var(--fg-secondary);
+  }
+  
+  .task-left {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-sm-2);
+  }
+  
+  .task-left input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  
+  .task-left span {
+    font-size: var(--fs-base);
+  }
+  
+  .task-delete {
+    background: transparent;
+    border: none;
+    color: var(--hi-danger);
+    font-size: var(--fs-lg-1);
+    cursor: pointer;
+  }
+    
